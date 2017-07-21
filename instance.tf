@@ -11,6 +11,6 @@ resource "aws_instance" "web" {
   tags {
     Name = "SAMPLE1"
     ENV = "DEV"
-    PURPOSE = "WEB"
+    PURPOSE = "APP"
   }
 }
