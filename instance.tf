@@ -1,6 +1,6 @@
 provider "aws" {
-  access_key = "AKIAIVENGEM7V2HDHTBQ"
-  secret_key = "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"
+  access_key = "${var.AWS_ACCESS_KEY}"
+  secret_key = "${var.AWS_SECRET_KEY}"
   region     = "us-west-2"
 }
 
@@ -10,5 +10,7 @@ resource "aws_instance" "web" {
 
   tags {
     Name = "SAMPLE1"
+    ENV = "DEV"
+    PURPOSE = "WEB"
   }
 }
